@@ -2,7 +2,9 @@ const button = document.getElementById('submit');
 button.addEventListener('click', async event =>{
 
   const post = document.getElementById('post').value;
-  const data = {post};
+  const college = document.getElementById('college').value;
+  const title = document.getElementById('title').value;
+  const data = {college,title,post};
   const options = {
     method: 'POST',
     headers: {
