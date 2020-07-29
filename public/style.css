@@ -25,9 +25,6 @@ h3{
   margin-top: 0;
   font-size: 20px;
 }
-.linebreak{
-  weight: 2px;
-}
 
 .title{
   background-color: white;
@@ -52,6 +49,9 @@ input[type=text]{
 .confessiontextbox{
   width: 40%;
 }
+select{
+  height: 40px;
+}
 .auto_height { /* CSS */
   width: 100%;
 }
@@ -65,25 +65,38 @@ input[type=text]{
 }
 .panel{
   color: black;
-  border-style: double;
+  border-style: solid;
   margin-left: auto;
   margin-right: auto;
   height: 500px;
   width: 50%;
   position: fixed;
   background-color: white;
-  left: 25%
+  left: 25%;
 
 }
 .buttonarrowleft{
-  left: 200px;
+  left: 20%;
   position: fixed;
-  top: 500px;
+  background-color: #1DA1F2;
+  text-decoration: none;
+  top: 450px;
+  padding: 8px 16px;
+  color:black;
+  border-radius: 20px;
+  /* font-weight: bold; */
 }
 .buttonarrowright{
-  right:200px;
+  right: 20%;
   position: fixed;
-  top: 500px;
+  top: 450px;
+  background-color: black;
+  text-decoration: none;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 20px;
+
+
 }
 h2{
   padding-top: 10px;
@@ -101,24 +114,24 @@ h2{
   height: auto;
   display:flex;
   /* !DECIDE WHICH STYLE for menu: space-around, or center  */
-  justify-content: center;
+  justify-content: space-around;
   font-family: "Nanum Myeongjo", serif;
-  font-weight: bold;
-  background-color: #EAD7CD;
+  font-weight: bolder;
+  background-color: #1DA1F2;
   /* background-color: white; */
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
   float: left;
-  color: 	#c79866;
+  color: 	white;
   text-align: center;
   padding: 5px 11px;
   text-decoration: none;
   font-size: 20px;
   margin-left: 20px;
   border-style: solid;
-  border-color: #EAD7CD;
+  border-color: #1DA1F2;
   border-width: thick;
   margin: 7px;
 }
@@ -131,10 +144,8 @@ h2{
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #CA9A81;
-  color: white;
-  border-style: ridge;
-  border-width: thick;
+  background-color: white;
+  color: #1DA1F2;
 
 
 }
