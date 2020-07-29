@@ -1,6 +1,6 @@
 const button = document.getElementById('submit');
 button.addEventListener('click', async event =>{
-
+  console.log("button pushed");
   const post = document.getElementById('post').value;
   const college = document.getElementById('college').value;
   const title = document.getElementById('title').value;

@@ -1,17 +1,29 @@
-var slideIndex = 1;
-showDivs(slideIndex);
+var currentIndex = 0;
+let data, response;
+getData();
+async function getData() 
+{
+       response = await fetch('/api');
+       data = await response.json();   
+      item = data[currentIndex];
+      document.getElementById('title').textContent = item.title;
+      document.getElementById('college').textContent = item.college;   
+      document.getElementById('post').textContent = item.post;   
+     }
 
 function plusDivs(n) {
-  showDivs(slideIndex += n);
+  if(currentIndex == 0 && n<0)
+  { 
+    //do nothing
+  }
+  else
+  {
+    currentIndex += n;
+    item = data[currentIndex];
+      document.getElementById('title').textContent = item.title;
+      document.getElementById('college').textContent = item.college;   
+      document.getElementById('post').textContent = item.post;   
+  }
+
 }
 
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("panel");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}

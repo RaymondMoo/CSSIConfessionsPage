@@ -25,3 +25,13 @@ app.post('/api', (request,response) => {
     timestamp: timestamp
   });
 });
+
+app.get('/api', (request, response) => {
+  database.find({}, (err, data) => {
+    if (err) {
+      response.end();
+      return;
+    }
+    response.json(data);
+  });
+});

@@ -1,41 +1,49 @@
 <!-- Main Webpage here -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
-    <script src="slides.js"></script>
-    <title>Confessions Page</title>
-  </head>
-  <body>
-    <div class="topnav">
-      <a class="active" href="index.html">Home</a>
-      <a href="not done here">Colleges</a> 
-      <a href="confessions.html">Confess</a>
-      <a href="not done here">About</a>
-    </div>
-    <div class = "title">
-      <h1>Confessions</h1>
-      <h3>SFW Edition</h3>
-      <br>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js">
+
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js">
+
+	</script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=BenchNine" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+	<script src="slides.js">
+	</script>
+	
+	<title>Confessions Page</title>
+</head>
+
+<body>
+
+	<div class="topnav">
+		<a class="active" href="index.html">Home</a>
+		<a href="not done here">Colleges</a>
+		<a href="confessions.html">Confess</a>
+		<a href="not done here">About</a>
+	</div>
+	<div class="title">
+		<h1>Confessions</h1>
+		<h3>SFW Edition</h3>
+		<br>
     </div>
     <div class="posts">
       <div class = "panel">
-        <h2>Post Title #1</h2>
-        <p>hopefully we can get the text can go here</p>
-        <p>plz</p>
-        <p>plz</p>
-        <p>work</p>
+        <h2><span id = "title"></span></h2>
+        <h3><span id="college"></span></h3>
+        <p><span id="post"></span></p>
+        
       </div>
-      <div class = "panel">
+      <!-- <div class = "panel">
         <h2>Post Title #2</h2>
         <p>hopefully we can get the text can go here</p>
         <p>plz</p>
@@ -48,10 +56,11 @@
         <p>plz</p>
         <p>plz</p>
         <p>work</p>
-      </div>
+      </div> -->
       <button class="buttonarrowleft" onclick="plusDivs(-1)">&#10094;</button>
       <button class="buttonarrowright" onclick="plusDivs(+1)">&#10095;</button>
     </div>
+
 
     <!-- <p>
       latitude: <span id="latitude"></span>&deg;<br />
@@ -60,16 +69,6 @@
     <!-- <label for="post">Enter your post</label>
     <input id="post" value="Write your post here" />
     <button id="submit">submit</button>
-    
-    <!-- requests data from the database -->
-    <script>
-      getData();
-      async function getData(){
-        const response = await fetch('/api');
-        const data = await response.json();
-        console.log(data);
-      }
-    </script>
 
   </body>
 </html>
